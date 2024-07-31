@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h3 align="center">Log In</h3>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <!--Must define a name for the input because it is the same name we will 
+            have to use in the backend-->
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email" 
+            placeholder="Enter email" 
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password" 
+            placeholder="Enter Password" 
+        />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Login</button>
+
+</form>
+
+
+{% endblock %}
+
+<!-- This means that the home template will have the same exact 
+ setup as the base template, but the block we have defined in the base 
+ template will be overwritten by the change-->
